@@ -15,7 +15,7 @@ export const site = {
   contact: {
     phone: '07 84 01 63 12',
     phoneHref: '+33784016312',
-    email: 'manoa2309@gmail.com',
+    email: 'occiboost@outlook.com',
   },
 
   /** Réseaux sociaux : ajoutez les liens réels, ils apparaîtront automatiquement dans le pied de page. */
@@ -34,7 +34,7 @@ export const site = {
      * La toute première demande déclenche un email « Activate » à cette adresse : cliquez dessus une fois.
      * Mettez '' pour désactiver.
      */
-    emailRelay: 'https://formsubmit.co/ajax/manoa2309@gmail.com',
+    emailRelay: 'https://formsubmit.co/ajax/occiboost@outlook.com',
   },
 
   /** Informations des mentions légales — à compléter avant la mise en ligne. */
