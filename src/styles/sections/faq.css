@@ -1,0 +1,116 @@
+/* ---------------------------------------------------------------- FAQ */
+.faq-layout {
+  display: grid;
+  gap: clamp(2rem, 1.5rem + 2vw, 3rem);
+}
+@media (min-width: 1024px) {
+  .faq-layout {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: clamp(3rem, 6vw, 7rem);
+    align-items: start;
+  }
+  .faq-intro {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
+  }
+}
+.faq-intro {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+}
+.faq-intro .t-lead {
+  max-width: 24rem;
+}
+.faq-intro .btn {
+  margin-top: 0.5rem;
+}
+
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-item h3 {
+  margin: 0;
+}
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1.45rem 0.25rem;
+  border: 0;
+  background: none;
+  text-align: left;
+  font-size: clamp(1.05rem, 0.98rem + 0.35vw, 1.25rem);
+  font-weight: 580;
+  font-stretch: 104%;
+  letter-spacing: -0.015em;
+  line-height: 1.35;
+  color: var(--color-ink);
+  cursor: pointer;
+}
+.faq-q:hover .faq-icon {
+  background: rgb(255 255 255 / 0.08);
+}
+.faq-icon {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  flex: none;
+  border-radius: 99px;
+  box-shadow: inset 0 0 0 1px var(--line-strong);
+  color: var(--color-mist);
+  transition:
+    transform 0.5s var(--ease-out-expo),
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+.faq-item[data-open] .faq-icon {
+  transform: rotate(45deg);
+  color: var(--color-night-900);
+  background: var(--boost);
+  box-shadow: none;
+}
+.faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.55s var(--ease-out-expo);
+}
+.faq-a > div {
+  overflow: hidden;
+  min-height: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.55s;
+}
+.faq-item[data-open] .faq-a > div {
+  visibility: visible;
+  transition-delay: 0s;
+}
+.faq-a p {
+  max-width: 40rem;
+  padding: 0 3.5rem 1.6rem 0.25rem;
+  color: var(--color-mist);
+  opacity: 0;
+  transform: translate3d(0, -6px, 0);
+  transition:
+    opacity 0.4s ease,
+    transform 0.5s var(--ease-out-expo);
+}
+.faq-item[data-open] .faq-a {
+  grid-template-rows: 1fr;
+}
+.faq-item[data-open] .faq-a p {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.08s;
+}
+@media (max-width: 559px) {
+  .faq-a p {
+    padding-right: 0.25rem;
+  }
+}

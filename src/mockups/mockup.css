@@ -1,0 +1,130 @@
+/*
+ * Base des maquettes de sites.
+ * Les valeurs en « mpx » sont des pixels de conception (voir vite.config.ts) :
+ * une maquette « desktop » est dessinée sur 1280 px, « tablet » sur 820 px, « mobile » sur 390 px.
+ */
+.mk {
+  --m: calc(100cqw / var(--mk-w, 1280));
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  font-size: 15mpx;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+  pointer-events: none;
+  text-align: left;
+  overflow: hidden;
+}
+.mk[data-variant="tablet"] {
+  --mk-w: 820;
+}
+.mk[data-variant="mobile"] {
+  --mk-w: 390;
+}
+.mk[data-variant="mini"] {
+  --mk-w: 960;
+}
+.mk *,
+.mk *::before,
+.mk *::after {
+  box-sizing: border-box;
+}
+.mk img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mk svg {
+  display: block;
+}
+.mk p,
+.mk h1,
+.mk h2,
+.mk h3 {
+  margin: 0;
+}
+
+/* page défilable (défilement automatique dans les vitrines) */
+.mk-page {
+  position: relative;
+  will-change: transform;
+}
+
+/* barre d'état des téléphones */
+.mk-status {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 46mpx;
+  padding: 0 30mpx 0 34mpx;
+  font-family: -apple-system, "SF Pro Text", "Mona Sans", sans-serif;
+  font-size: 14.5mpx;
+  font-weight: 650;
+}
+.mk-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 5mpx;
+}
+.mk-status-icons i {
+  display: block;
+  width: 17mpx;
+  height: 10mpx;
+  border-radius: 2.5mpx;
+  background: currentColor;
+}
+.mk-status-icons i:nth-child(1) {
+  width: 16mpx;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  border-radius: 1mpx;
+}
+.mk-status-icons i:nth-child(2) {
+  width: 14mpx;
+  height: 10mpx;
+  border-radius: 50% 50% 0 0;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+.mk-status-icons i:nth-child(3) {
+  width: 23mpx;
+  height: 11mpx;
+  border-radius: 3.5mpx;
+  background: transparent;
+  box-shadow: inset 0 0 0 1.2mpx currentColor;
+  position: relative;
+}
+.mk-status-icons i:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  inset: 2.2mpx 6mpx 2.2mpx 2.2mpx;
+  border-radius: 1.5mpx;
+  background: currentColor;
+}
+
+/* icône burger générique */
+.mk-burger {
+  display: grid;
+  gap: 5mpx;
+  width: 22mpx;
+}
+.mk-burger i {
+  display: block;
+  height: 2mpx;
+  border-radius: 2mpx;
+  background: currentColor;
+}
+
+/* visibilité selon la variante */
+.mk[data-variant="mobile"] .only-desktop,
+.mk[data-variant="tablet"] .only-desktop {
+  display: none !important;
+}
+.mk:not([data-variant="mobile"]) .only-mobile {
+  display: none !important;
+}
+.mk[data-variant="mobile"] .not-mobile {
+  display: none !important;
+}

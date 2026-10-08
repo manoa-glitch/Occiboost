@@ -1,0 +1,373 @@
+/* Concept « Sauge & Sel » — bistrot de saison. Vert forêt, crème, safran ; titres en Young Serif. */
+.mk-resto {
+  --bg: #15221a;
+  --bg2: #1d2d23;
+  --cream: #f3ebdd;
+  --muted: #bdb5a2;
+  --saffron: #e8a93a;
+  --line: rgb(243 235 221 / 0.14);
+  background: var(--bg);
+  color: var(--cream);
+  font-family: "Mona Sans", ui-sans-serif, sans-serif;
+}
+
+.r-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84mpx;
+  padding: 0 64mpx;
+  border-bottom: 1mpx solid var(--line);
+}
+.r-logo {
+  display: flex;
+  align-items: center;
+  gap: 10mpx;
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 25mpx;
+  letter-spacing: -0.01em;
+  color: var(--cream);
+}
+.r-logo svg {
+  width: 28mpx;
+  height: 28mpx;
+  color: #9cc27f;
+}
+.r-links {
+  display: flex;
+  gap: 34mpx;
+  font-size: 15mpx;
+  color: var(--muted);
+}
+.r-nav-end {
+  display: flex;
+  align-items: center;
+  gap: 16mpx;
+}
+.r-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48mpx;
+  padding: 0 24mpx;
+  border-radius: 999mpx;
+  background: var(--saffron);
+  color: #1d1a10;
+  font-weight: 650;
+  font-size: 15mpx;
+  white-space: nowrap;
+}
+.r-btn--sm {
+  height: 42mpx;
+  padding: 0 20mpx;
+}
+.r-btn--ghost {
+  background: transparent;
+  color: var(--cream);
+  box-shadow: inset 0 0 0 1.5mpx rgb(243 235 221 / 0.42);
+}
+.r-btn--block {
+  width: 100%;
+}
+
+.r-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.08fr;
+  gap: 56mpx;
+  align-items: center;
+  padding: 60mpx 64mpx 76mpx;
+}
+.r-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10mpx;
+  font-size: 14mpx;
+  font-weight: 560;
+  color: var(--saffron);
+}
+.r-dot {
+  width: 7mpx;
+  height: 7mpx;
+  border-radius: 9mpx;
+  background: var(--saffron);
+}
+.r-title {
+  margin-top: 18mpx;
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 62mpx;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+}
+.r-lead {
+  margin-top: 22mpx;
+  max-width: 470mpx;
+  font-size: 17mpx;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.r-actions {
+  display: flex;
+  gap: 12mpx;
+  margin-top: 32mpx;
+}
+.r-info {
+  display: flex;
+  gap: 36mpx;
+  margin-top: 40mpx;
+  padding-top: 22mpx;
+  border-top: 1mpx solid var(--line);
+  font-size: 14mpx;
+}
+.r-info div {
+  display: grid;
+  gap: 4mpx;
+}
+.r-info span {
+  font-size: 12.5mpx;
+  color: var(--muted);
+}
+.r-info strong {
+  font-weight: 560;
+}
+.r-hero-img {
+  position: relative;
+  height: 540mpx;
+  margin: 0;
+  border-radius: 24mpx;
+  overflow: hidden;
+}
+.r-badge {
+  position: absolute;
+  left: 22mpx;
+  bottom: 22mpx;
+  display: grid;
+  gap: 2mpx;
+  padding: 14mpx 18mpx;
+  border-radius: 14mpx;
+  background: rgb(21 34 26 / 0.88);
+  box-shadow: inset 0 0 0 1mpx var(--line);
+  font-size: 13mpx;
+}
+.r-badge strong {
+  font-family: "Young Serif", Georgia, serif;
+  font-weight: 400;
+  font-size: 17mpx;
+}
+.r-badge span {
+  color: var(--muted);
+}
+
+.r-menu {
+  padding: 72mpx 64mpx;
+  background: var(--cream);
+  color: #1f2a20;
+}
+.r-menu-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20mpx;
+}
+.r-menu-head p {
+  font-size: 15mpx;
+  color: #5d6457;
+}
+.r-h2 {
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 44mpx;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+.r-dishes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28mpx;
+  margin-top: 36mpx;
+}
+.r-dish-img {
+  aspect-ratio: 1;
+  border-radius: 18mpx;
+  overflow: hidden;
+}
+.r-dish-body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14mpx;
+  margin-top: 16mpx;
+}
+.r-dish-name {
+  font-family: "Young Serif", Georgia, serif;
+  font-size: 19mpx;
+  line-height: 1.25;
+}
+.r-dish-desc {
+  margin-top: 4mpx;
+  font-size: 14mpx;
+  color: #5d6457;
+}
+.r-price {
+  font-weight: 650;
+  font-size: 16mpx;
+  white-space: nowrap;
+}
+
+.r-book {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48mpx;
+  align-items: center;
+  padding: 76mpx 64mpx;
+}
+.r-book-text p {
+  margin-top: 14mpx;
+  font-size: 16mpx;
+  color: var(--muted);
+  max-width: 400mpx;
+}
+.r-widget {
+  padding: 26mpx;
+  border-radius: 22mpx;
+  background: var(--bg2);
+  box-shadow: inset 0 0 0 1mpx var(--line);
+}
+.r-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10mpx;
+  padding: 14mpx 16mpx;
+  border-radius: 12mpx;
+  background: rgb(243 235 221 / 0.06);
+  font-size: 14mpx;
+}
+.r-field span {
+  color: var(--muted);
+}
+.r-field strong {
+  font-weight: 560;
+}
+.r-slots {
+  display: flex;
+  gap: 8mpx;
+  margin: 16mpx 0 20mpx;
+}
+.r-slot {
+  flex: 1;
+  padding: 11mpx 0;
+  border-radius: 10mpx;
+  text-align: center;
+  box-shadow: inset 0 0 0 1mpx var(--line);
+  font-size: 14mpx;
+  font-weight: 560;
+}
+.r-slot.is-on {
+  background: var(--saffron);
+  color: #1d1a10;
+  box-shadow: none;
+}
+
+.r-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30mpx 64mpx;
+  border-top: 1mpx solid var(--line);
+  font-size: 13.5mpx;
+  color: var(--muted);
+}
+.r-foot .r-logo {
+  font-size: 20mpx;
+}
+
+/* ---- mobile */
+.mk-resto[data-variant="mobile"] .r-nav {
+  height: 60mpx;
+  padding: 0 20mpx;
+  border-bottom: 0;
+}
+.mk-resto[data-variant="mobile"] .r-logo {
+  font-size: 21mpx;
+}
+.mk-resto[data-variant="mobile"] .r-btn--sm {
+  height: 36mpx;
+  padding: 0 14mpx;
+  font-size: 13mpx;
+}
+.mk-resto[data-variant="mobile"] .r-hero {
+  grid-template-columns: 1fr;
+  gap: 22mpx;
+  padding: 6mpx 16mpx 40mpx;
+}
+.mk-resto[data-variant="mobile"] .r-hero-img {
+  order: -1;
+  height: 290mpx;
+  border-radius: 20mpx;
+}
+.mk-resto[data-variant="mobile"] .r-hero-text {
+  padding: 0 6mpx;
+}
+.mk-resto[data-variant="mobile"] .r-title {
+  font-size: 36mpx;
+  margin-top: 12mpx;
+}
+.mk-resto[data-variant="mobile"] .r-lead {
+  font-size: 15.5mpx;
+  margin-top: 14mpx;
+}
+.mk-resto[data-variant="mobile"] .r-actions {
+  flex-direction: column;
+  margin-top: 22mpx;
+}
+.mk-resto[data-variant="mobile"] .r-actions .r-btn {
+  width: 100%;
+  height: 50mpx;
+}
+.mk-resto[data-variant="mobile"] .r-info {
+  flex-direction: column;
+  gap: 14mpx;
+  margin-top: 26mpx;
+}
+.mk-resto[data-variant="mobile"] .r-menu {
+  padding: 40mpx 20mpx;
+}
+.mk-resto[data-variant="mobile"] .r-menu-head {
+  display: grid;
+  gap: 6mpx;
+}
+.mk-resto[data-variant="mobile"] .r-h2 {
+  font-size: 30mpx;
+}
+.mk-resto[data-variant="mobile"] .r-dishes {
+  grid-template-columns: 1fr;
+  gap: 16mpx;
+  margin-top: 22mpx;
+}
+.mk-resto[data-variant="mobile"] .r-dish {
+  display: grid;
+  grid-template-columns: 88mpx 1fr;
+  gap: 14mpx;
+  align-items: center;
+}
+.mk-resto[data-variant="mobile"] .r-dish-img {
+  border-radius: 14mpx;
+}
+.mk-resto[data-variant="mobile"] .r-dish-body {
+  margin-top: 0;
+}
+.mk-resto[data-variant="mobile"] .r-dish-name {
+  font-size: 16.5mpx;
+}
+.mk-resto[data-variant="mobile"] .r-dish-desc {
+  font-size: 13mpx;
+}
+.mk-resto[data-variant="mobile"] .r-book {
+  grid-template-columns: 1fr;
+  gap: 22mpx;
+  padding: 40mpx 20mpx;
+}
+.mk-resto[data-variant="mobile"] .r-foot {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8mpx;
+  padding: 28mpx 20mpx 40mpx;
+}

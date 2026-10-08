@@ -1,0 +1,893 @@
+/*
+ * Mini-sites des cartes « Services » (largeur de conception 960 px, landing : 390 px).
+ * Les boucles d'animation ne tournent que lorsque la carte est visible : [data-play] sur un parent.
+ */
+
+/* ================================================================ site vitrine — Cabinet Valmont */
+.mk-vit {
+  --ink: #14302c;
+  --bg: #f5f2ec;
+  --accent: #2f7a68;
+  --muted: #5f6f69;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Mona Sans", sans-serif;
+}
+.v-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76mpx;
+  padding: 0 44mpx;
+  background: #fff;
+  border-bottom: 1mpx solid #e4ded3;
+}
+.v-logo {
+  display: flex;
+  align-items: center;
+  gap: 12mpx;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 26mpx;
+  font-weight: 500;
+}
+.v-logo i {
+  display: grid;
+  place-items: center;
+  width: 36mpx;
+  height: 36mpx;
+  border-radius: 99mpx;
+  background: var(--ink);
+  color: #f5f2ec;
+  font-style: normal;
+  font-size: 20mpx;
+}
+.v-links {
+  display: flex;
+  gap: 28mpx;
+  font-size: 16mpx;
+  color: var(--muted);
+}
+.v-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46mpx;
+  padding: 0 22mpx;
+  border-radius: 10mpx;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 620;
+  font-size: 16mpx;
+}
+.v-btn--block {
+  width: 100%;
+  margin-top: 6mpx;
+}
+.v-hero {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 40mpx;
+  padding: 50mpx 44mpx;
+}
+.v-kicker {
+  font-size: 15mpx;
+  font-weight: 600;
+  color: var(--accent);
+}
+.v-title {
+  margin-top: 12mpx;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500;
+  font-size: 56mpx;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+}
+.v-lead {
+  margin-top: 18mpx;
+  font-size: 18mpx;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.v-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10mpx;
+  margin-top: 26mpx;
+}
+.v-tiles span {
+  padding: 10mpx 16mpx;
+  border-radius: 99mpx;
+  background: #fff;
+  box-shadow: inset 0 0 0 1mpx #e1dbd0;
+  font-size: 15mpx;
+  font-weight: 560;
+}
+.v-form {
+  display: grid;
+  align-content: start;
+  gap: 12mpx;
+  padding: 28mpx;
+  border-radius: 18mpx;
+  background: #fff;
+  box-shadow: 0 30mpx 60mpx -30mpx rgb(20 48 44 / 0.35);
+}
+.v-form strong {
+  font-size: 20mpx;
+  font-weight: 640;
+  margin-bottom: 4mpx;
+}
+.v-input {
+  display: flex;
+  align-items: center;
+  height: 48mpx;
+  padding: 0 16mpx;
+  border-radius: 10mpx;
+  background: #f7f5f1;
+  box-shadow: inset 0 0 0 1mpx #e5e0d6;
+  font-size: 15mpx;
+  color: #8a948f;
+}
+.v-input--sel {
+  color: var(--ink);
+  font-weight: 560;
+}
+
+/* ================================================================ landing page — salon */
+.mk-land {
+  --ink: #1b1029;
+  height: 100%;
+  background: #fff;
+  color: var(--ink);
+  font-family: "Mona Sans", sans-serif;
+}
+.mk-land .mk-status {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+}
+.l-hero {
+  position: relative;
+  display: grid;
+  justify-items: start;
+  gap: 16mpx;
+  padding: 92mpx 22mpx 30mpx;
+  background:
+    radial-gradient(300mpx 260mpx at 90% 10%, rgb(255 187 120 / 0.9), transparent 70%),
+    linear-gradient(160deg, #3a1d6e 0%, #7b2f8f 55%, #e0566b 100%);
+  color: #fff;
+  border-radius: 0 0 30mpx 30mpx;
+}
+.l-chip {
+  padding: 7mpx 12mpx;
+  border-radius: 99mpx;
+  background: rgb(255 255 255 / 0.18);
+  font-size: 13mpx;
+  font-weight: 600;
+}
+.l-title {
+  font-size: 44mpx;
+  font-weight: 800;
+  font-stretch: 112%;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+.l-lead {
+  font-size: 15.5mpx;
+  line-height: 1.5;
+  color: rgb(255 255 255 / 0.85);
+}
+.l-count {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8mpx;
+  width: 100%;
+  margin-top: 4mpx;
+}
+.l-count span {
+  display: grid;
+  justify-items: center;
+  padding: 10mpx 0;
+  border-radius: 14mpx;
+  background: rgb(255 255 255 / 0.14);
+  font-size: 12mpx;
+  color: rgb(255 255 255 / 0.8);
+}
+.l-count b {
+  font-size: 26mpx;
+  font-weight: 750;
+  color: #fff;
+  line-height: 1.2;
+}
+.l-cta {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 56mpx;
+  margin-top: 6mpx;
+  border-radius: 16mpx;
+  background: #fff;
+  color: #3a1d6e;
+  font-weight: 720;
+  font-size: 16mpx;
+  overflow: hidden;
+}
+.l-cta-a,
+.l-cta-b {
+  grid-area: 1 / 1;
+}
+.l-cta-b {
+  opacity: 0;
+  color: #157a4c;
+}
+.l-tap {
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  width: 26mpx;
+  height: 26mpx;
+  margin: -13mpx 0 0 -13mpx;
+  border-radius: 99mpx;
+  background: rgb(58 29 110 / 0.25);
+  opacity: 0;
+}
+.l-list {
+  display: grid;
+  gap: 12mpx;
+  margin: 0;
+  padding: 26mpx 22mpx;
+  list-style: none;
+  font-size: 15mpx;
+  color: #4c4459;
+}
+.l-list li {
+  display: flex;
+  gap: 10mpx;
+  align-items: baseline;
+}
+.l-list li::before {
+  content: "";
+  width: 8mpx;
+  height: 8mpx;
+  flex: none;
+  border-radius: 99mpx;
+  background: #e0566b;
+  transform: translateY(-1mpx);
+}
+.l-list b {
+  color: var(--ink);
+}
+
+[data-play] .mk-land .l-cta-a {
+  animation: land-a 5.5s ease infinite;
+}
+[data-play] .mk-land .l-cta-b {
+  animation: land-b 5.5s ease infinite;
+}
+[data-play] .mk-land .l-tap {
+  animation: land-tap 5.5s ease infinite;
+}
+[data-play] .mk-land .l-cta {
+  animation: land-press 5.5s ease infinite;
+}
+@keyframes land-tap {
+  0%, 22% { opacity: 0; transform: scale(0.4); }
+  26% { opacity: 1; transform: scale(1); }
+  36% { opacity: 0; transform: scale(5); }
+  100% { opacity: 0; }
+}
+@keyframes land-press {
+  0%, 24% { transform: none; }
+  27% { transform: scale(0.97); }
+  31%, 100% { transform: none; }
+}
+@keyframes land-a {
+  0%, 30% { opacity: 1; transform: none; }
+  36%, 88% { opacity: 0; transform: translateY(-60%); }
+  96%, 100% { opacity: 1; transform: none; }
+}
+@keyframes land-b {
+  0%, 32% { opacity: 0; transform: translateY(60%); }
+  38%, 86% { opacity: 1; transform: none; }
+  92%, 100% { opacity: 0; transform: translateY(-60%); }
+}
+
+/* ================================================================ e-commerce — maison argile */
+.mk-shop {
+  height: 100%;
+  background: #fbf9f6;
+  color: #2b2520;
+  font-family: "Mona Sans", sans-serif;
+}
+.s-strip {
+  padding: 9mpx;
+  background: #2b2520;
+  color: #efe7dc;
+  font-size: 13mpx;
+  text-align: center;
+}
+.s-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72mpx;
+  padding: 0 40mpx;
+  border-bottom: 1mpx solid #ece5db;
+}
+.s-logo {
+  font-size: 25mpx;
+  font-weight: 700;
+  font-stretch: 118%;
+  letter-spacing: -0.04em;
+}
+.s-links {
+  display: flex;
+  gap: 26mpx;
+  font-size: 15mpx;
+  color: #6f655c;
+}
+.s-cart {
+  position: relative;
+  width: 30mpx;
+  height: 30mpx;
+}
+.s-cart svg {
+  width: 100%;
+  height: 100%;
+}
+.s-badge {
+  position: absolute;
+  top: -8mpx;
+  right: -10mpx;
+  display: grid;
+  place-items: center;
+  width: 22mpx;
+  height: 22mpx;
+  border-radius: 99mpx;
+  background: #c8553d;
+  color: #fff;
+  font-size: 12mpx;
+  overflow: hidden;
+}
+.s-badge span {
+  grid-area: 1 / 1;
+}
+.s-n3 {
+  opacity: 0;
+}
+.s-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18mpx;
+  padding: 28mpx 40mpx;
+}
+.s-card {
+  position: relative;
+}
+.s-img {
+  aspect-ratio: 4 / 5;
+  border-radius: 12mpx;
+  overflow: hidden;
+}
+.s-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12mpx;
+  font-size: 15mpx;
+}
+.s-meta b {
+  font-weight: 650;
+}
+.s-add {
+  position: absolute;
+  left: 10mpx;
+  right: 10mpx;
+  top: calc(100% - 92mpx);
+  display: grid;
+  place-items: center;
+  height: 44mpx;
+  border-radius: 10mpx;
+  background: #2b2520;
+  color: #fff;
+  font-size: 14mpx;
+  font-weight: 620;
+  overflow: hidden;
+}
+.s-add span {
+  grid-area: 1 / 1;
+}
+.s-add-b {
+  opacity: 0;
+}
+.s-fly {
+  position: absolute;
+  left: 13%;
+  top: 62%;
+  width: 16mpx;
+  height: 16mpx;
+  border-radius: 99mpx;
+  background: #c8553d;
+  opacity: 0;
+}
+[data-play] .mk-shop .s-add {
+  animation: shop-press 6s ease infinite;
+}
+[data-play] .mk-shop .s-add-a {
+  animation: shop-a 6s ease infinite;
+}
+[data-play] .mk-shop .s-add-b {
+  animation: shop-b 6s ease infinite;
+}
+[data-play] .mk-shop .s-fly {
+  animation: shop-fly 6s cubic-bezier(0.5, 0, 0.3, 1) infinite;
+}
+[data-play] .mk-shop .s-n2 {
+  animation: shop-n2 6s ease infinite;
+}
+[data-play] .mk-shop .s-n3 {
+  animation: shop-n3 6s ease infinite;
+}
+[data-play] .mk-shop .s-badge {
+  animation: shop-bump 6s ease infinite;
+}
+@keyframes shop-press {
+  0%, 18% { transform: none; }
+  21% { transform: scale(0.95); }
+  25%, 100% { transform: none; }
+}
+@keyframes shop-a {
+  0%, 22% { opacity: 1; }
+  26%, 84% { opacity: 0; }
+  90%, 100% { opacity: 1; }
+}
+@keyframes shop-b {
+  0%, 24% { opacity: 0; }
+  28%, 82% { opacity: 1; }
+  88%, 100% { opacity: 0; }
+}
+@keyframes shop-fly {
+  0%, 22% { opacity: 0; transform: translate(0, 0) scale(1); }
+  24% { opacity: 1; }
+  40% { opacity: 1; transform: translate(calc(780 * var(--m)), calc(-330 * var(--m))) scale(0.6); }
+  42%, 100% { opacity: 0; transform: translate(calc(780 * var(--m)), calc(-330 * var(--m))) scale(0.6); }
+}
+@keyframes shop-n2 {
+  0%, 40% { opacity: 1; transform: none; }
+  44%, 90% { opacity: 0; transform: translateY(-100%); }
+  96%, 100% { opacity: 1; transform: none; }
+}
+@keyframes shop-n3 {
+  0%, 40% { opacity: 0; transform: translateY(100%); }
+  44%, 88% { opacity: 1; transform: none; }
+  94%, 100% { opacity: 0; transform: translateY(-100%); }
+}
+@keyframes shop-bump {
+  0%, 40% { transform: none; }
+  44% { transform: scale(1.35); }
+  50%, 100% { transform: none; }
+}
+
+/* ================================================================ refonte — avant / après */
+.mk-ref {
+  --pos: 50%;
+  height: 100%;
+  font-family: "Mona Sans", sans-serif;
+  background: #ccc;
+}
+[data-play] .mk-ref:not([data-manual]) {
+  animation: ref-sweep 7s ease-in-out infinite;
+}
+@property --pos {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 50%;
+}
+@keyframes ref-sweep {
+  0%, 100% { --pos: 76%; }
+  50% { --pos: 24%; }
+}
+.rf-old,
+.rf-new {
+  position: absolute;
+  inset: 0;
+}
+.rf-old {
+  background: #e9e9e9;
+  font-family: "Times New Roman", Times, serif;
+  color: #000;
+}
+.rf-old-head {
+  padding: 18mpx 24mpx 10mpx;
+  background: linear-gradient(#4a6fa5, #1f3d73);
+  border-bottom: 4mpx solid #c0a040;
+}
+.rf-old-title {
+  display: block;
+  font-size: 40mpx;
+  font-weight: 700;
+  font-style: italic;
+  color: #ffd75a;
+  text-shadow: 2mpx 2mpx 0 #000;
+}
+.rf-old-marquee {
+  display: block;
+  margin-top: 6mpx;
+  font-size: 16mpx;
+  color: #fff;
+  white-space: nowrap;
+}
+.rf-old-body {
+  display: grid;
+  grid-template-columns: 200mpx 1fr;
+}
+.rf-old-nav {
+  margin: 0;
+  padding: 18mpx 16mpx;
+  list-style: none;
+  background: #d4d0c8;
+  border-right: 2mpx solid #999;
+  min-height: 600mpx;
+}
+.rf-old-nav li {
+  margin-bottom: 12mpx;
+  font-size: 18mpx;
+  color: #0000ee;
+  text-decoration: underline;
+}
+.rf-old-main {
+  padding: 18mpx 22mpx;
+  font-size: 16mpx;
+}
+.rf-old-h {
+  font-size: 24mpx;
+  font-weight: 700;
+  color: #800000;
+}
+.rf-old-row {
+  display: grid;
+  grid-template-columns: 240mpx 1fr;
+  gap: 16mpx;
+  margin-top: 14mpx;
+}
+.rf-old-row img {
+  height: 150mpx;
+  border: 4mpx ridge #999;
+  filter: saturate(0.6) contrast(0.9);
+}
+.rf-old-row p {
+  line-height: 1.3;
+}
+.rf-old-count {
+  margin-top: 26mpx;
+  display: inline-block;
+  padding: 4mpx 10mpx;
+  background: #000;
+  color: #3f3;
+  font-family: "Courier New", monospace;
+  font-size: 15mpx;
+}
+.rf-new {
+  clip-path: inset(0 0 0 var(--pos));
+  color: #fff;
+}
+.rf-new > img {
+  position: absolute;
+  inset: 0;
+}
+.rf-new-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(10 20 30 / 0.45), transparent 35%, rgb(10 20 30 / 0.6));
+}
+.rf-new-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80mpx;
+  padding: 0 40mpx;
+}
+.rf-new-logo {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 30mpx;
+  letter-spacing: 0.02em;
+}
+.rf-new-links {
+  display: flex;
+  gap: 28mpx;
+  font-size: 16mpx;
+}
+.rf-new-btn {
+  padding: 11mpx 20mpx;
+  border-radius: 99mpx;
+  background: #fff;
+  color: #10202c;
+  font-weight: 620;
+  font-size: 15mpx;
+}
+.rf-new-hero {
+  position: absolute;
+  left: 40mpx;
+  right: 40mpx;
+  bottom: 40mpx;
+}
+.rf-new-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 66mpx;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.rf-new-book {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.4fr;
+  gap: 8mpx;
+  margin-top: 22mpx;
+  padding: 10mpx;
+  border-radius: 16mpx;
+  background: #fff;
+  color: #10202c;
+}
+.rf-new-book span {
+  display: grid;
+  padding: 6mpx 12mpx;
+  font-size: 15mpx;
+}
+.rf-new-book small {
+  font-size: 12mpx;
+  color: #6c7680;
+}
+.rf-new-go {
+  place-items: center;
+  border-radius: 10mpx;
+  background: #10202c;
+  color: #fff;
+  font-weight: 620;
+}
+.rf-handle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--pos);
+  width: 0;
+  z-index: 3;
+}
+.rf-handle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.5mpx;
+  width: 3mpx;
+  background: #fff;
+  box-shadow: 0 0 20mpx rgb(92 225 255 / 0.9);
+}
+.rf-knob {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 46mpx;
+  height: 46mpx;
+  border-radius: 99mpx;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 8mpx 24mpx rgb(0 0 0 / 0.35);
+}
+.rf-knob::before,
+.rf-knob::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 7mpx solid transparent;
+  transform: translateY(-50%);
+}
+.rf-knob::before {
+  left: 7mpx;
+  border-right-color: #10202c;
+}
+.rf-knob::after {
+  right: 7mpx;
+  border-left-color: #10202c;
+}
+.rf-tag {
+  position: absolute;
+  top: 18mpx;
+  padding: 6mpx 12mpx;
+  border-radius: 99mpx;
+  background: rgb(10 16 30 / 0.78);
+  color: #fff;
+  font-family: "Mona Sans", sans-serif;
+  font-size: 14mpx;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.rf-tag--a {
+  right: 14mpx;
+}
+.rf-tag--b {
+  left: 14mpx;
+}
+.rf-range {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: ew-resize;
+  pointer-events: auto;
+  touch-action: pan-y;
+}
+
+/* ================================================================ sur mesure — outil métier */
+.mk-app {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 190mpx 1fr;
+  background: #f5f7fb;
+  color: #141a2e;
+  font-family: "Mona Sans", sans-serif;
+}
+.ap-side {
+  display: grid;
+  align-content: start;
+  gap: 4mpx;
+  padding: 22mpx 14mpx;
+  background: #141a2e;
+  color: #9aa3bf;
+  font-size: 15mpx;
+}
+.ap-side span {
+  padding: 10mpx 12mpx;
+  border-radius: 9mpx;
+}
+.ap-side .is-on {
+  background: rgb(255 255 255 / 0.08);
+  color: #fff;
+  font-weight: 600;
+}
+.ap-logo {
+  display: flex !important;
+  align-items: center;
+  gap: 10mpx;
+  margin-bottom: 14mpx;
+  color: #fff;
+  font-weight: 750;
+  font-stretch: 112%;
+  font-size: 19mpx !important;
+}
+.ap-logo i {
+  width: 22mpx;
+  height: 22mpx;
+  border-radius: 7mpx;
+  background: linear-gradient(135deg, #7c8cff, #47d1c4);
+}
+.ap-main {
+  padding: 22mpx 24mpx;
+  min-width: 0;
+}
+.ap-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ap-head div {
+  display: grid;
+}
+.ap-head small {
+  font-size: 13mpx;
+  color: #6b7390;
+}
+.ap-head strong {
+  font-size: 22mpx;
+  font-weight: 680;
+  letter-spacing: -0.02em;
+}
+.ap-new {
+  padding: 10mpx 16mpx;
+  border-radius: 10mpx;
+  background: #4c5fd5;
+  color: #fff;
+  font-size: 14mpx;
+  font-weight: 620;
+}
+.ap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10mpx;
+  margin-top: 18mpx;
+}
+.ap-day-name {
+  display: block;
+  padding-bottom: 8mpx;
+  font-size: 13.5mpx;
+  font-weight: 600;
+  color: #4a5270;
+}
+.ap-col {
+  position: relative;
+  height: 430mpx;
+  border-radius: 12mpx;
+  background:
+    repeating-linear-gradient(to bottom, transparent 0, transparent calc(86 * var(--m) - 1px), #e3e7f0 calc(86 * var(--m) - 1px), #e3e7f0 calc(86 * var(--m))),
+    #fff;
+  box-shadow: inset 0 0 0 1mpx #e3e7f0;
+}
+.ap-ev {
+  position: absolute;
+  left: 6mpx;
+  right: 6mpx;
+  top: calc((var(--s) * 86 + 5) * var(--m));
+  height: calc((var(--l) * 86 - 10) * var(--m));
+  display: grid;
+  align-content: start;
+  padding: 8mpx 10mpx;
+  border-radius: 9mpx;
+  font-size: 12.5mpx;
+  line-height: 1.3;
+  overflow: hidden;
+}
+.ap-ev b {
+  font-size: 13.5mpx;
+  font-weight: 650;
+}
+.ap-ev--blue {
+  background: #e5eaff;
+  color: #2b3a99;
+}
+.ap-ev--green {
+  background: #ddf5ec;
+  color: #11684a;
+}
+.ap-ev--amber {
+  background: #fff0d9;
+  color: #8a5300;
+}
+.ap-ev--new {
+  background: #4c5fd5;
+  color: #fff;
+  box-shadow: 0 14mpx 30mpx -10mpx rgb(76 95 213 / 0.7);
+  opacity: 0;
+}
+.ap-toast {
+  position: absolute;
+  right: 24mpx;
+  bottom: 22mpx;
+  display: flex;
+  align-items: center;
+  gap: 10mpx;
+  padding: 12mpx 16mpx;
+  border-radius: 12mpx;
+  background: #141a2e;
+  color: #fff;
+  font-size: 14mpx;
+  font-weight: 560;
+  opacity: 0;
+}
+.ap-toast i {
+  width: 18mpx;
+  height: 18mpx;
+  border-radius: 99mpx;
+  background: #3ccf91 url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m6 12.5 4 4L18 8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") center / 70% no-repeat;
+}
+[data-play] .mk-app .ap-ev--new {
+  animation: app-drop 6.5s var(--ease-out-expo) infinite;
+}
+[data-play] .mk-app .ap-toast {
+  animation: app-toast 6.5s var(--ease-out-expo) infinite;
+}
+@keyframes app-drop {
+  0%, 15% { opacity: 0; transform: translateY(-40%) scale(0.92); }
+  24%, 86% { opacity: 1; transform: none; }
+  94%, 100% { opacity: 0; transform: none; }
+}
+@keyframes app-toast {
+  0%, 26% { opacity: 0; transform: translateY(40%); }
+  32%, 84% { opacity: 1; transform: none; }
+  92%, 100% { opacity: 0; transform: translateY(20%); }
+}

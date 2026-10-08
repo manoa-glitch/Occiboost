@@ -1,0 +1,48 @@
+/* ---------------------------------------------------------------- pages légales et 404 */
+.legal-hero {
+  padding-top: calc(var(--header-h) + clamp(3rem, 2rem + 4vw, 6rem));
+}
+.legal {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 50rem;
+}
+.legal-body {
+  display: grid;
+  gap: 2.25rem;
+  margin-top: 2.5rem;
+}
+.legal-block h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 620;
+  font-stretch: 106%;
+  letter-spacing: -0.015em;
+}
+.legal-block p,
+.legal-block li {
+  color: var(--color-mist);
+}
+.legal-block p + p {
+  margin-top: 0.75rem;
+}
+.legal-block ul {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+}
+.legal-block a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: rgb(92 225 255 / 0.5);
+  text-underline-offset: 3px;
+}
+.notfound {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+  min-height: 50vh;
+  align-content: center;
+}

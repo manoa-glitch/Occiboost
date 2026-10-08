@@ -1,0 +1,411 @@
+/* Concept « Atelier Fil du Bois » — menuiserie. Lin, noyer, cuivre ; titres Mona Sans condensé. */
+.mk-artisan {
+  --bg: #f4efe7;
+  --paper: #fbf8f3;
+  --ink: #231c16;
+  --muted: #6e6258;
+  --copper: #c2622d;
+  --line: rgb(35 28 22 / 0.12);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Mona Sans", ui-sans-serif, sans-serif;
+}
+.a-display {
+  font-stretch: 75%;
+  font-weight: 820;
+  text-transform: uppercase;
+  line-height: 0.94;
+  letter-spacing: -0.005em;
+}
+
+.a-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 9mpx 64mpx;
+  background: var(--ink);
+  color: #e9dfd2;
+  font-size: 12.5mpx;
+}
+.a-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80mpx;
+  padding: 0 64mpx;
+  background: var(--paper);
+  border-bottom: 1mpx solid var(--line);
+}
+.a-logo {
+  display: flex;
+  align-items: center;
+  gap: 12mpx;
+}
+.a-logo-mark {
+  display: grid;
+  place-items: center;
+  width: 40mpx;
+  height: 40mpx;
+  border-radius: 8mpx;
+  background: linear-gradient(135deg, #b98a5c, #8f6239);
+  color: #fff6ea;
+  font-stretch: 75%;
+  font-weight: 860;
+  font-size: 17mpx;
+  letter-spacing: 0.02em;
+}
+.a-logo-text {
+  display: grid;
+  gap: 2mpx;
+  line-height: 1;
+}
+.a-logo-text strong {
+  font-stretch: 75%;
+  font-weight: 840;
+  font-size: 20mpx;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.a-logo-text small {
+  font-size: 11.5mpx;
+  color: var(--muted);
+}
+.a-links {
+  display: flex;
+  gap: 30mpx;
+  font-size: 15mpx;
+  font-weight: 520;
+}
+.a-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48mpx;
+  padding: 0 22mpx;
+  border-radius: 6mpx;
+  background: var(--copper);
+  color: #fff;
+  font-weight: 650;
+  font-size: 15mpx;
+  white-space: nowrap;
+}
+.a-btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5mpx var(--ink);
+}
+
+.a-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.14fr;
+  gap: 48mpx;
+  padding: 54mpx 64mpx 64mpx;
+}
+.a-hero-text {
+  align-self: center;
+}
+.a-eyebrow {
+  font-size: 14mpx;
+  font-weight: 650;
+  color: var(--copper);
+}
+.a-title {
+  margin-top: 16mpx;
+  font-size: 72mpx;
+}
+.a-lead {
+  margin-top: 22mpx;
+  max-width: 470mpx;
+  font-size: 17mpx;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.a-actions {
+  display: flex;
+  gap: 12mpx;
+  margin-top: 30mpx;
+}
+.a-trust {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 32mpx;
+  margin-top: 40mpx;
+  padding-top: 22mpx;
+  border-top: 1mpx solid var(--line);
+  font-size: 13.5mpx;
+  color: var(--muted);
+}
+.a-trust b {
+  display: block;
+  font-stretch: 75%;
+  font-weight: 830;
+  font-size: 28mpx;
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.a-hero-img {
+  position: relative;
+  margin: 0;
+  min-height: 520mpx;
+  border-radius: 10mpx;
+  overflow: hidden;
+}
+.a-hero-img img {
+  position: absolute;
+  inset: 0;
+}
+.a-tag {
+  position: absolute;
+  left: 18mpx;
+  bottom: 18mpx;
+  padding: 9mpx 13mpx;
+  border-radius: 6mpx;
+  background: var(--paper);
+  font-size: 13mpx;
+  font-weight: 620;
+}
+
+.a-services {
+  padding: 64mpx;
+  background: var(--paper);
+}
+.a-sec-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.a-h2 {
+  font-size: 46mpx;
+}
+.a-more {
+  font-size: 14mpx;
+  font-weight: 620;
+  border-bottom: 1.5mpx solid var(--ink);
+}
+.a-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22mpx;
+  margin-top: 30mpx;
+}
+.a-card-img {
+  aspect-ratio: 4 / 3;
+  border-radius: 8mpx;
+  overflow: hidden;
+}
+.a-card-title {
+  margin-top: 16mpx;
+  font-size: 23mpx;
+}
+.a-card p {
+  margin-top: 6mpx;
+  font-size: 14mpx;
+  color: var(--muted);
+}
+
+.a-zone {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 44mpx;
+  align-items: center;
+  padding: 64mpx;
+}
+.a-map {
+  height: 300mpx;
+  border-radius: 10mpx;
+  overflow: hidden;
+}
+.a-map svg {
+  width: 100%;
+  height: 100%;
+}
+.a-zone-text p {
+  margin-top: 14mpx;
+  font-size: 16mpx;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.a-checks {
+  display: grid;
+  gap: 10mpx;
+  margin-top: 20mpx;
+  font-size: 15mpx;
+  font-weight: 520;
+}
+.a-checks li {
+  display: flex;
+  gap: 10mpx;
+  align-items: center;
+}
+.a-checks li::before {
+  content: "";
+  width: 18mpx;
+  height: 18mpx;
+  flex: none;
+  border-radius: 99mpx;
+  background: var(--copper) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='m6 12.5 4 4L18 8' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>") center / 70% no-repeat;
+}
+
+.a-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24mpx;
+  margin: 0 64mpx 64mpx;
+  padding: 36mpx 40mpx;
+  border-radius: 10mpx;
+  background: var(--ink);
+  color: #f4efe7;
+}
+.a-contact-title {
+  font-size: 40mpx;
+}
+.a-contact p {
+  margin-top: 8mpx;
+  font-size: 15mpx;
+  color: #c9bdb0;
+}
+
+/* ---- tablette / mobile */
+.mk-artisan[data-variant="mobile"] .a-nav {
+  height: 64mpx;
+  padding: 0 18mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-logo-mark {
+  width: 34mpx;
+  height: 34mpx;
+  font-size: 15mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-logo-text strong {
+  font-size: 17mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-hero {
+  grid-template-columns: 1fr;
+  gap: 22mpx;
+  padding: 18mpx 18mpx 36mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-hero-img {
+  order: -1;
+  min-height: 250mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-title {
+  font-size: 44mpx;
+  margin-top: 10mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-lead {
+  font-size: 15mpx;
+  margin-top: 14mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-actions {
+  flex-direction: column;
+  margin-top: 22mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-actions .a-btn {
+  width: 100%;
+  height: 50mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-trust {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12mpx;
+  margin-top: 26mpx;
+  font-size: 11.5mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-trust b {
+  font-size: 22mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-services {
+  padding: 36mpx 18mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-h2 {
+  font-size: 34mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-more {
+  display: none;
+}
+.mk-artisan[data-variant="mobile"] .a-cards {
+  grid-template-columns: 1fr;
+  gap: 22mpx;
+  margin-top: 20mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-zone {
+  grid-template-columns: 1fr;
+  gap: 22mpx;
+  padding: 36mpx 18mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-map {
+  height: 220mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-contact {
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 18mpx 36mpx;
+  padding: 26mpx 22mpx;
+}
+.mk-artisan[data-variant="mobile"] .a-contact-title {
+  font-size: 32mpx;
+}
+
+/* ---- maquette fil de fer (section Méthode) */
+.mk-artisan .w,
+.mk-artisan .w-box,
+.mk-artisan .a-btn,
+.mk-artisan .w-img,
+.mk-artisan .a-services,
+.mk-artisan .a-nav,
+.mk-artisan .a-top,
+.mk-artisan .a-contact,
+.mk-artisan .a-trust,
+.mk-artisan img {
+  transition:
+    color 0.7s ease,
+    background-color 0.7s ease,
+    box-shadow 0.7s ease,
+    border-color 0.7s ease,
+    opacity 0.7s ease;
+}
+.mk-artisan[data-mode="wire"] {
+  --wire: #e4e8ef;
+  --wire-line: #c7cfdc;
+  background: #fff;
+}
+.mk-artisan[data-mode="wire"] .a-top,
+.mk-artisan[data-mode="wire"] .a-nav,
+.mk-artisan[data-mode="wire"] .a-services,
+.mk-artisan[data-mode="wire"] .a-contact {
+  background: #fff;
+  border-color: var(--wire-line);
+}
+.mk-artisan[data-mode="wire"] .a-contact {
+  box-shadow: inset 0 0 0 1.5mpx var(--wire-line);
+}
+.mk-artisan[data-mode="wire"] .w {
+  color: transparent;
+  background: var(--wire);
+  border-radius: 4mpx;
+  border-color: transparent;
+}
+.mk-artisan[data-mode="wire"] .a-trust {
+  border-color: var(--wire-line);
+}
+.mk-artisan[data-mode="wire"] .w-box {
+  color: transparent;
+  background: var(--wire);
+}
+.mk-artisan[data-mode="wire"] .a-btn {
+  color: transparent;
+  background: #fff;
+  box-shadow: inset 0 0 0 1.5mpx var(--wire-line);
+}
+.mk-artisan[data-mode="wire"] .w-img {
+  background:
+    linear-gradient(to top right, transparent calc(50% - 1px), var(--wire-line) 50%, transparent calc(50% + 1px)),
+    linear-gradient(to bottom right, transparent calc(50% - 1px), var(--wire-line) 50%, transparent calc(50% + 1px)),
+    var(--wire);
+}
+.mk-artisan[data-mode="wire"] img,
+.mk-artisan[data-mode="wire"] .a-tag,
+.mk-artisan[data-mode="wire"] .a-map svg,
+.mk-artisan[data-mode="wire"] .a-checks li::before {
+  opacity: 0;
+}

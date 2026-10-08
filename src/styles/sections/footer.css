@@ -1,0 +1,123 @@
+/* ---------------------------------------------------------------- pied de page */
+.site-footer {
+  position: relative;
+  padding-top: clamp(3.5rem, 2.5rem + 3vw, 5rem);
+  border-top: 1px solid var(--line);
+  background: var(--color-night-950);
+  overflow: hidden;
+}
+.footer-top {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 760px) {
+  .footer-top {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}
+.footer-brand p {
+  margin-top: 1rem;
+  max-width: 20rem;
+  color: var(--color-mist);
+}
+.footer-title {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  font-weight: 560;
+  color: var(--color-haze);
+}
+.footer-col ul {
+  display: grid;
+  gap: 0.6rem;
+}
+.footer-col a,
+.footer-link-btn {
+  color: var(--color-mist);
+  transition: color 0.2s ease;
+}
+.footer-link-btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+.footer-col a:hover,
+.footer-link-btn:hover {
+  color: var(--color-ink);
+}
+.footer-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--color-mist);
+}
+.footer-contact .icon {
+  color: var(--color-haze);
+}
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: clamp(2.5rem, 2rem + 2vw, 4rem);
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.88rem;
+  color: var(--color-haze);
+}
+.footer-bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+.footer-bottom a:hover {
+  color: var(--color-ink);
+}
+.footer-word {
+  margin-top: 0.5rem;
+  margin-bottom: -0.2em;
+  text-align: center;
+  font-size: clamp(4rem, 1rem + 15vw, 15rem);
+  font-weight: 700;
+  font-stretch: 125%;
+  letter-spacing: -0.06em;
+  line-height: 0.8;
+  color: transparent;
+  background: linear-gradient(180deg, rgb(160 178 255 / 0.14), rgb(160 178 255 / 0));
+  -webkit-background-clip: text;
+  background-clip: text;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- bouton flottant mobile */
+.mobile-cta {
+  position: fixed;
+  z-index: 45;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  padding: 0.75rem var(--gutter) calc(0.85rem + env(safe-area-inset-bottom, 0px));
+  pointer-events: none;
+  transform: translateY(120%);
+  transition: transform 0.5s var(--ease-out-expo);
+}
+.mobile-cta .btn {
+  width: 100%;
+  pointer-events: auto;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.65),
+    0 0 0 1px rgb(255 255 255 / 0.12),
+    0 18px 40px -10px rgb(0 0 0 / 0.75),
+    0 8px 30px -8px rgb(92 225 255 / 0.55);
+}
+.mobile-cta[data-show] {
+  transform: none;
+}
+@media (max-width: 759px) {
+  .mobile-cta {
+    display: block;
+  }
+}

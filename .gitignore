@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dist-preview/
+.ssr/
+design/illustrations/out/
+__pycache__/
+*.log
+.DS_Store
+.netlify/

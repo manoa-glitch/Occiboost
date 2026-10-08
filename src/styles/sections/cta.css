@@ -1,0 +1,120 @@
+/* ---------------------------------------------------------------- appel à l'action final */
+.final-cta {
+  padding-top: calc(var(--section-y) * 0.5);
+}
+.cta-panel {
+  --mx: 50%;
+  --my: 30%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: clamp(1.5rem, 1rem + 2vw, 2.5rem);
+  padding: clamp(4rem, 3rem + 6vw, 9rem) clamp(1.5rem, 1rem + 4vw, 5rem) clamp(10rem, 6rem + 12vw, 19rem);
+  background: radial-gradient(120% 90% at 50% 0%, #101a45 0%, #070c22 60%);
+  box-shadow: inset 0 0 0 1px var(--line);
+  text-align: center;
+}
+
+/* l'horizon : le bord d'un astre éclairé, l'élan du « boost » */
+.cta-horizon {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: 0;
+  width: max(160%, 70rem);
+  aspect-ratio: 1;
+  transform: translate(-50%, 88%);
+}
+[data-rv="show"] .cta-horizon {
+  animation: horizon-rise 1.6s var(--ease-out-expo) both;
+}
+@keyframes horizon-rise {
+  from {
+    transform: translate(-50%, 100%);
+  }
+  to {
+    transform: translate(-50%, 88%);
+  }
+}
+.cta-atmo {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: -17%;
+  height: 34%;
+  background: radial-gradient(closest-side, rgb(92 225 255 / 0.5), rgb(91 124 255 / 0.3) 48%, transparent 100%);
+  animation: atmo 7s ease-in-out infinite alternate;
+}
+@keyframes atmo {
+  to {
+    opacity: 0.7;
+    transform: scale(1.05, 0.92);
+  }
+}
+.cta-planet {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, #050918 96%, #0b1638 100%);
+  box-shadow:
+    0 -1px 0 rgb(214 244 255 / 0.95),
+    0 -4px 14px rgb(120 220 255 / 0.65);
+}
+.cta-spot {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(30rem 22rem at var(--mx) var(--my), rgb(91 124 255 / 0.16), transparent 70%);
+  pointer-events: none;
+}
+
+.cta-content {
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
+.cta-title {
+  max-width: 12em;
+  font-size: clamp(2.6rem, 1.3rem + 4.8vw, 5.75rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 640;
+  font-stretch: 112%;
+}
+.cta-text {
+  max-width: 34rem;
+  font-size: clamp(1.06rem, 0.98rem + 0.35vw, 1.25rem);
+  color: var(--color-mist);
+}
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.cta-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--color-haze);
+}
+.cta-phone a {
+  color: var(--color-ink);
+  font-weight: 560;
+  border-bottom: 1px solid rgb(92 225 255 / 0.45);
+}
+
+@media (max-width: 559px) {
+  .cta-panel {
+    margin-inline: calc(var(--gutter) * -0.5);
+  }
+  .cta-actions {
+    display: grid;
+    width: 100%;
+  }
+  .cta-actions .btn {
+    width: 100%;
+  }
+}

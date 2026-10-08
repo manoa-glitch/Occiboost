@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!--head-->
+    <meta name="theme-color" content="#070C22" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!--preload-->
+  </head>
+  <body>
+    <div id="root"><!--app--></div>
+    <!--
+      Formulaire statique destiné à Netlify Forms : il permet à Netlify de détecter
+      le formulaire au déploiement. Le vrai formulaire est affiché par l'application.
+    -->
+    <form name="projet" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="projet" />
+      <input name="intention" /><input name="secteur" /><input name="type-de-site" /><input name="structure" />
+      <input name="nom" /><input name="entreprise" /><input name="email" /><input name="telephone" />
+      <textarea name="message"></textarea><input name="bot-field" />
+    </form>
+    <script type="module" src="/src/entry-client.tsx"></script>
+  </body>
+</html>
