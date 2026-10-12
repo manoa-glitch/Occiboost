@@ -93,10 +93,10 @@ src/
   content/home.ts         tous les textes de l'accueil
   components/
     layout/               en-tête, pied de page, bouton flottant mobile
-    sections/             Hero, Showcase, Work, Services, Sectors, Benefits, Method, Faq, FinalCta
+    sections/             Hero, Showcase, Work, Sectors, Benefits, Method, Faq, FinalCta
     contact/              formulaire (dialog natif) et contexte d'ouverture
     ui/                   logo, icônes, cadres navigateur / téléphone / tablette
-  mockups/                sites d'exemple (entreprises fictives) et mini-sites des services
+  mockups/                sites d'exemple (entreprises fictives)
   pages/                  accueil, pages légales, 404
   styles/                 système visuel (global.css) + une feuille par section
   lib/                    hooks, apparitions au scroll, routes
@@ -111,7 +111,7 @@ public/                   favicon, image de partage (og-image.jpg)
 
 Les sites d’exemple sont de vrais composants HTML/CSS, dessinés sur une largeur de conception (1280 px ordinateur, 820 px tablette, 390 px mobile) avec l’unité `mpx` (convertie au build en `calc(n * var(--m))`). Ils se redimensionnent donc sans flou, du hero aux petites cartes. Ils sont `aria-hidden` et marqués `data-nosnippet` pour ne pas polluer le référencement.
 
-Les entreprises présentées (Sauge & Sel, Atelier Fil du Bois, Kelvia, Rivage Immobilier, Cabinet Valmont, Maison Argile, Hôtel des Embruns, Atlas) sont **fictives** et signalées comme telles sur le site et dans les mentions légales.
+Les entreprises présentées (Sauge & Sel, Atelier Fil du Bois, Kelvia, Rivage Immobilier) sont **fictives** et signalées comme telles sur le site et dans les mentions légales.
 
 ### Illustrations
 

@@ -1,6 +1,5 @@
 import { Hero } from '../components/sections/Hero';
 import { Work } from '../components/sections/Work';
-import { Services } from '../components/sections/Services';
 import { Sectors } from '../components/sections/Sectors';
 import { Benefits } from '../components/sections/Benefits';
 import { Method } from '../components/sections/Method';
@@ -8,7 +7,7 @@ import { Faq } from '../components/sections/Faq';
 import { FinalCta } from '../components/sections/FinalCta';
 
 /**
- * Parcours : comprendre (Hero) → voir (Travail) → se projeter (Services, Secteurs)
+ * Parcours : comprendre (Hero) → voir (Travail) → se projeter (Secteurs)
  * → être rassuré (Pourquoi, Méthode, FAQ) → agir (CTA final).
  */
 export function HomePage() {
@@ -16,7 +15,6 @@ export function HomePage() {
     <>
       <Hero />
       <Work />
-      <Services />
       <Sectors />
       <Benefits />
       <Method />

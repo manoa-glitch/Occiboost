@@ -7,7 +7,6 @@ import { Logo } from '../ui/Logo';
 export function Footer({ page }: { page: PageId }) {
   const links = [
     { label: 'Accueil', href: page === 'home' ? '#top' : paths.home },
-    { label: 'Services', href: sectionHref(page, 'services') },
     { label: 'Méthode', href: sectionHref(page, 'methode') },
     { label: 'Secteurs', href: sectionHref(page, 'secteurs') },
     { label: 'FAQ', href: sectionHref(page, 'faq') },

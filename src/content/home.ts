@@ -41,39 +41,6 @@ export const work = {
    */
 };
 
-export const services = {
-  title: 'Des sites pensés pour votre entreprise.',
-  lead: 'Chaque projet part de vos objectifs. Voici les formats que nous concevons le plus souvent.',
-  items: [
-    {
-      id: 'vitrine',
-      title: 'Site vitrine',
-      text: 'Pour présenter votre entreprise, vos services et générer des contacts.',
-    },
-    {
-      id: 'landing',
-      title: 'Landing page',
-      text: 'Pour mettre en avant une offre, un lancement ou une campagne.',
-    },
-    {
-      id: 'ecommerce',
-      title: 'E-commerce',
-      text: 'Pour vendre vos produits en ligne, simplement.',
-    },
-    {
-      id: 'refonte',
-      title: 'Refonte',
-      text: 'Pour moderniser un site existant et lui redonner de l’impact.',
-    },
-    {
-      id: 'surmesure',
-      title: 'Site sur mesure',
-      text: 'Espace client, réservation, outil métier : pour des besoins plus spécifiques.',
-    },
-  ],
-  footnote: 'Vous hésitez entre plusieurs formats ? Nous vous aidons à choisir.',
-};
-
 export type SectorStyle = {
   /** Famille et réglages typographiques appliqués au nom du secteur */
   font: 'serif' | 'garamond' | 'garamond-italic' | 'plex' | 'mona';
@@ -238,7 +205,6 @@ export const finalCta = {
 
 export const nav = [
   { id: 'travail', label: 'Notre travail' },
-  { id: 'services', label: 'Services' },
   { id: 'secteurs', label: 'Secteurs' },
   { id: 'methode', label: 'Méthode' },
   { id: 'faq', label: 'FAQ' },

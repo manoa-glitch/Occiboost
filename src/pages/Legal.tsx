@@ -55,9 +55,8 @@ function Mentions() {
           contraire. Toute reproduction ou réutilisation sans autorisation écrite préalable est interdite.
         </p>
         <p>
-          Les sites présentés à titre d’exemple (Sauge &amp; Sel, Atelier Fil du Bois, Kelvia, Rivage Immobilier et les
-          maquettes de la section Services) sont des concepts créés par OcciBoost pour des entreprises fictives. Assmati est
-          une réalisation réelle.
+          Les sites présentés à titre d’exemple (Sauge &amp; Sel, Atelier Fil du Bois, Kelvia, Rivage Immobilier) sont des
+          concepts créés par OcciBoost pour des entreprises fictives. Assmati est une réalisation réelle.
         </p>
       </Block>
       <Block title="Données personnelles et cookies">
