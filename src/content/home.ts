@@ -17,13 +17,13 @@ export const hero = {
 export const work = {
   label: 'Réalisation récente',
   name: 'Assmati',
-  url: 'https://assmati.com',
-  domain: 'assmati.com',
+  url: 'https://stalwart-souffle-520ce0.netlify.app/',
+  domain: 'stalwart-souffle-520ce0.netlify.app',
   tagline: 'Le carnet de liaison numérique entre assistantes maternelles et parents.',
   summary:
-    "Une application web complète pour les assistantes maternelles et les maisons d'assistantes maternelles (MAM), pensée pour simplifier le quotidien et le lien avec les familles.",
+    "Un site internet et une application web complète pour les assistantes maternelles et les maisons d'assistantes maternelles (MAM), pensés pour simplifier le quotidien et le lien avec les familles.",
   audience: ['Assistantes maternelles', 'MAM', 'Parents'],
-  scope: ['Conception', "Design de l'interface", 'Développement', 'Abonnements en ligne', 'Site vitrine'],
+  scope: ['Site internet', 'Application web', 'Conception', "Design de l'interface", 'Développement', 'Abonnements en ligne'],
   brand: '#6B8E7F',
   modules: [
     { icon: 'clock', title: 'Présences', text: 'Arrivées et départs suivis au quotidien.' },
