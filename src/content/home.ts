@@ -5,12 +5,12 @@
 
 export const hero = {
   badge: 'Création de sites internet',
-  badgeExtra: 'sur mesure',
+  badgeExtra: 'à Toulouse',
   title: 'Votre entreprise mérite un site à la hauteur de vos ambitions.',
-  lead: 'Nous créons des sites internet modernes, professionnels et sur mesure, adaptés à votre activité et à vos objectifs.',
+  lead: 'Nous créons des sites internet modernes, professionnels et sur mesure pour les entreprises de Toulouse et d’Occitanie.',
   primary: 'Parler de mon projet',
   secondary: 'Voir notre travail',
-  audience: 'Indépendants, commerces, PME, startups ou grands groupes : chaque site est conçu pour vous.',
+  audience: 'Basés à Toulouse, nous venons vous rencontrer. Indépendants, commerces, PME ou grands groupes : chaque site est conçu pour vous.',
 };
 
 /** Réalisation réelle présentée dans la section « Notre travail ». */
@@ -185,9 +185,9 @@ export const benefits = {
 
 export const method = {
   title: 'De l’idée au site en ligne.',
-  lead: 'Une méthode simple, avec un interlocuteur unique du premier échange à la mise en ligne.',
+  lead: 'Une méthode simple, avec un interlocuteur unique basé à Toulouse, du premier rendez-vous à la mise en ligne.',
   steps: [
-    { title: 'Échange', text: 'Nous prenons le temps de comprendre votre entreprise, vos clients et vos objectifs.' },
+    { title: 'Rencontre', text: 'Nous venons vous voir, dans vos locaux ou autour d’un café, pour comprendre votre entreprise, vos clients et vos objectifs.' },
     { title: 'Conception', text: 'Nous imaginons le design et le parcours de vos visiteurs. Vous validez la direction.' },
     { title: 'Création', text: 'Nous construisons votre site, page après page, avec vos contenus.' },
     { title: 'Mise en ligne', text: 'Nous testons tout, sur tous les écrans, puis nous mettons votre site en ligne.' },
@@ -198,6 +198,10 @@ export const faq = {
   title: 'Questions fréquentes',
   lead: 'Une autre question ? Le plus simple est d’en parler.',
   items: [
+    {
+      q: 'Où intervenez-vous ?',
+      a: 'Nous sommes basés à Toulouse et accompagnons les entreprises d’Occitanie. Nous nous déplaçons pour vous rencontrer en personne ; si vous préférez, les échanges peuvent aussi se faire par téléphone ou en visio.',
+    },
     {
       q: 'Combien coûte un site internet ?',
       a: 'Le prix dépend du type de site, du nombre de pages et des fonctionnalités. Après un premier échange, nous vous envoyons un devis détaillé, adapté à votre projet.',
@@ -227,7 +231,7 @@ export const faq = {
 
 export const finalCta = {
   title: 'Votre prochain site commence ici.',
-  text: 'Parlez-nous de votre projet et imaginons ensemble un site à la hauteur de votre entreprise.',
+  text: 'Basés à Toulouse, nous venons vous rencontrer en Occitanie pour parler de votre projet et imaginer ensemble un site à la hauteur de votre entreprise.',
   primary: 'Parler de mon projet',
   secondary: 'Demander un devis',
 };

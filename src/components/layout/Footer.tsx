@@ -43,6 +43,12 @@ export function Footer({ page }: { page: PageId }) {
             <p className="footer-title">Contact</p>
             <ul>
               <li>
+                <span className="footer-contact">
+                  <Icon name="pin" />
+                  {site.location.label}
+                </span>
+              </li>
+              <li>
                 <a className="footer-contact" href={`tel:${site.contact.phoneHref}`}>
                   <Icon name="phone" />
                   {site.contact.phone}

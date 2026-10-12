@@ -10,9 +10,9 @@ export type PageMeta = { title: string; description: string; path: string; robot
 
 export const pages: Record<PageId, PageMeta> = {
   home: {
-    title: 'OcciBoost — Création de sites internet professionnels',
+    title: 'OcciBoost — Création de sites internet à Toulouse et en Occitanie',
     description:
-      'OcciBoost crée des sites internet modernes, professionnels et sur mesure pour les entreprises de toutes tailles et de tous secteurs. Parlez-nous de votre projet.',
+      'Création de sites internet sur mesure à Toulouse et en Occitanie : site vitrine, e-commerce, refonte. Un interlocuteur local qui vient vous rencontrer. Parlez-nous de votre projet.',
     path: paths.home,
   },
   mentions: {
@@ -66,7 +66,11 @@ export function head(page: PageId, ogImage: string) {
       ...(site.url ? { url: site.url, image: abs(ogImage) } : {}),
       telephone: site.contact.phoneHref,
       ...(site.contact.email ? { email: site.contact.email } : {}),
-      areaServed: { '@type': 'Country', name: 'France' },
+      address: { '@type': 'PostalAddress', addressLocality: site.location.city, addressRegion: site.location.region, addressCountry: 'FR' },
+      areaServed: [
+        { '@type': 'City', name: site.location.city },
+        { '@type': 'AdministrativeArea', name: site.location.region },
+      ],
       knowsAbout: ['Création de sites internet', 'Site vitrine', 'Landing page', 'E-commerce', 'Refonte de site', 'Site sur mesure'],
     };
     const faqLd = {

@@ -7,7 +7,10 @@
  */
 export const site = {
   name: 'OcciBoost',
-  baseline: 'Création de sites internet professionnels',
+  baseline: 'Création de sites internet à Toulouse et en Occitanie',
+
+  /** Implantation : sert au texte du site et au référencement local. */
+  location: { city: 'Toulouse', region: 'Occitanie', label: 'Toulouse · Occitanie' },
 
   /** Adresse publique du site, sans « / » final. Sert au canonical, à Open Graph et au sitemap. */
   url: 'https://occiboost.netlify.app', // à remplacer par votre domaine définitif

@@ -5,3 +5,4 @@
 - Avant de pousser : `npm run typecheck` et `npm run build` doivent passer.
 - Coordonnées, formulaire et mentions légales : `src/config/site.ts`. Textes : `src/content/home.ts`.
 - Conserver l'identité visuelle décrite dans le README (section « Identité visuelle »).
+- Positionnement : studio local basé à Toulouse, clientèle d'Occitanie, rendez-vous en personne possibles. Chaque texte doit rester cohérent avec cet ancrage local (pas de « partout en France »). Lieu central : `site.location` dans `src/config/site.ts`.

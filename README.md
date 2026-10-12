@@ -1,6 +1,6 @@
 # Site OcciBoost
 
-Site vitrine d’OcciBoost — création de sites internet professionnels.
+Site vitrine d’OcciBoost — création de sites internet à Toulouse et en Occitanie (studio local, rendez-vous en personne).
 React 19 + TypeScript + Vite + Tailwind CSS 4, **pré-rendu en HTML statique** (SEO, affichage immédiat) puis hydraté côté navigateur pour les animations et interactions. Aucune autre dépendance d’exécution.
 
 ---

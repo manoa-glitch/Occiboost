@@ -117,7 +117,7 @@ export function Method() {
                   ))}
                 </div>
                 <div className="mt-brief">
-                  <p className="mt-brief-title">Premier échange</p>
+                  <p className="mt-brief-title">Premier rendez-vous</p>
                   <ul>
                     {brief.map((b, i) => (
                       <li key={b.text} className={`mt-note mt-note--${b.tone}`} style={{ '--i': i } as CSSProperties}>

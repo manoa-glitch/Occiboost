@@ -91,8 +91,8 @@ function Privacy() {
         <p>Nous collectons uniquement les informations que vous saisissez dans le formulaire de contact :</p>
         <ul>
           <li>nom et prénom, adresse email ;</li>
-          <li>nom de l’entreprise et numéro de téléphone, s’ils sont renseignés ;</li>
-          <li>type de projet, type de structure et message.</li>
+          <li>nom de l’entreprise, numéro de téléphone et ville, s’ils sont renseignés ;</li>
+          <li>type de projet, type de structure, mode de premier échange souhaité et message.</li>
         </ul>
       </Block>
       <Block title="Finalités et base légale">

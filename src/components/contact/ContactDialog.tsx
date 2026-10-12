@@ -6,6 +6,7 @@ import { useContact } from './ContactContext';
 
 const TYPES = ['Site vitrine', 'Landing page', 'E-commerce', 'Refonte', 'Site sur mesure', 'Je ne sais pas encore'];
 const STRUCTURES = ['Indépendant', 'TPE', 'PME', 'Startup', 'ETI ou grand groupe', 'Association'];
+const MEETINGS = ['Rendez-vous en personne', 'Téléphone', 'Visio'];
 
 type Status = 'idle' | 'sending' | 'success' | 'error' | 'preview';
 
@@ -17,6 +18,7 @@ export function ContactDialog() {
   const [status, setStatus] = useState<Status>('idle');
   const [type, setType] = useState('');
   const [structure, setStructure] = useState('');
+  const [meeting, setMeeting] = useState(MEETINGS[0]);
 
   const isQuote = preset.intent === 'devis';
 
@@ -27,6 +29,7 @@ export function ContactDialog() {
     if (isOpen && !dlg.open) {
       setStatus('idle');
       setType(preset.type ?? '');
+      setMeeting(MEETINGS[0]);
       setClosing(false);
       dlg.showModal();
       requestAnimationFrame(() => titleRef.current?.focus());
@@ -84,6 +87,8 @@ export function ContactDialog() {
               'Type de site': get('type-de-site'),
               Structure: get('structure'),
               Secteur: get('secteur'),
+              'Premier échange': get('premier-echange'),
+              Ville: get('ville'),
               Nom: get('nom'),
               Entreprise: get('entreprise'),
               Email: get('email'),
@@ -131,7 +136,7 @@ export function ContactDialog() {
               <p>
                 {isQuote
                   ? 'Décrivez votre besoin en quelques lignes : nous revenons vers vous avec une proposition adaptée.'
-                  : 'Quelques informations suffisent. Nous revenons vers vous pour en discuter.'}
+                  : 'Quelques informations suffisent. Nous revenons vers vous pour en discuter, en rendez-vous si vous le souhaitez.'}
               </p>
             )}
           </div>
@@ -203,6 +208,18 @@ export function ContactDialog() {
               </div>
             </fieldset>
 
+            <fieldset className="cd-group">
+              <legend>Pour un premier échange, vous préférez</legend>
+              <div className="cd-chips">
+                {MEETINGS.map((t) => (
+                  <label key={t} className="cd-chip">
+                    <input type="radio" name="premier-echange" value={t} checked={meeting === t} onChange={() => setMeeting(t)} />
+                    <span>{t}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
             <div className="cd-fields">
               <div className="cd-field">
                 <label htmlFor="cd-nom">Nom et prénom</label>
@@ -223,6 +240,12 @@ export function ContactDialog() {
                   Téléphone <span>facultatif</span>
                 </label>
                 <input id="cd-tel" name="telephone" type="tel" autoComplete="tel" inputMode="tel" />
+              </div>
+              <div className="cd-field cd-field--full">
+                <label htmlFor="cd-ville">
+                  Ville de votre entreprise <span>facultatif</span>
+                </label>
+                <input id="cd-ville" name="ville" autoComplete="address-level2" placeholder="Toulouse, Montauban, Albi…" />
               </div>
               <div className="cd-field cd-field--full">
                 <label htmlFor="cd-message">Votre projet en quelques mots</label>
