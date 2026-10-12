@@ -1,0 +1,393 @@
+/* Assmati : écrans reconstitués à partir des jetons de l'application (styles.css d'Assmati) */
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces-latin-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-latin-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+.as {
+  --cream: oklch(0.967 0.018 85);
+  --cream-deep: oklch(0.935 0.022 84);
+  --fg: oklch(0.24 0.005 80);
+  --muted: oklch(0.5 0.01 80);
+  --border: oklch(0.88 0.012 80);
+  --sage: oklch(0.6 0.045 155);
+  --sage-soft: oklch(0.9 0.025 155);
+  --terra: oklch(0.65 0.13 40);
+  --terra-soft: oklch(0.92 0.05 45);
+  --mustard: oklch(0.72 0.12 80);
+  --mustard-soft: oklch(0.93 0.05 85);
+  --plum: oklch(0.6 0.08 310);
+  --blush: oklch(0.92 0.035 15);
+  --rose-deep: #7a3f44;
+  --sky-soft: oklch(0.91 0.03 240);
+  height: 100%;
+  background: var(--cream);
+  color: var(--fg);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 14mpx;
+}
+.as b {
+  font-weight: inherit;
+}
+.as-i {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+.as-h1,
+.as-h2,
+.as-h3,
+.as-kid-txt b,
+.as-stat b {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.as-xs {
+  font-size: 12mpx;
+  color: var(--muted);
+}
+.as-sage { color: var(--sage); display: inline-flex; }
+.as-terra { color: var(--terra); display: inline-flex; }
+
+.as-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12mpx;
+  padding: 10mpx 20mpx 20mpx;
+}
+.as-head--parent {
+  align-items: center;
+  padding-bottom: 0;
+}
+.as-date {
+  font-size: 14mpx;
+  color: var(--muted);
+}
+.as-h1 {
+  font-size: 30mpx;
+  line-height: 1.2;
+  margin-top: 4mpx !important;
+}
+.as-mam {
+  display: inline-flex;
+  align-items: center;
+  gap: 8mpx;
+  margin-top: 8mpx;
+  padding: 6mpx 12mpx;
+  border-radius: 999mpx;
+  border: 1mpx solid color-mix(in oklab, var(--sage) 20%, transparent);
+  background: color-mix(in oklab, var(--sage) 10%, transparent);
+  color: var(--sage);
+  font-size: 12mpx;
+  font-weight: 500;
+}
+.as-mam .as-i { font-size: 14mpx; }
+.as-head--parent .as-mam { margin-top: 0; }
+.as-topi {
+  display: flex;
+  gap: 18mpx;
+  padding-top: 6mpx;
+  color: var(--muted);
+  font-size: 20mpx;
+}
+
+.as-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12mpx;
+  padding: 0 20mpx;
+  margin-bottom: 28mpx;
+}
+.as-stat {
+  display: grid;
+  padding: 16mpx;
+  border-radius: 16mpx;
+}
+.as-stat b {
+  font-size: 30mpx;
+  line-height: 1.2;
+}
+.as-stat span {
+  margin-top: 4mpx;
+  font-size: 12mpx;
+  opacity: 0.7;
+}
+.as-t-sage { background: var(--sage-soft); }
+.as-t-terra { background: var(--terra-soft); }
+.as-t-mustard { background: var(--mustard-soft); }
+.as-t-sky { background: var(--sky-soft); }
+.as-t-blush { background: var(--blush); }
+.as-t-cream { background: var(--cream-deep); }
+
+.as-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 20mpx;
+  margin-bottom: 12mpx;
+}
+.as-h2 {
+  font-size: 24mpx;
+  line-height: 1.25;
+}
+.as-h2--today {
+  padding: 0 20mpx;
+  margin: 22mpx 0 12mpx !important;
+}
+.as-h3 {
+  padding: 0 20mpx;
+  margin: 24mpx 0 10mpx !important;
+  font-size: 18mpx;
+  color: var(--muted);
+}
+
+.as-card {
+  background: #fff;
+  border-radius: 16mpx;
+  box-shadow: 0 1mpx 2mpx rgb(0 0 0 / 0.05);
+}
+.as-kids {
+  display: grid;
+  gap: 10mpx;
+  margin: 0;
+  padding: 0 20mpx;
+  list-style: none;
+}
+.as-kid {
+  display: flex;
+  align-items: center;
+  gap: 12mpx;
+  padding: 12mpx;
+}
+.as-av {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52mpx;
+  height: 52mpx;
+  border-radius: 16mpx;
+  font-size: 28mpx;
+  line-height: 1;
+}
+.as-av--lg {
+  width: 64mpx;
+  height: 64mpx;
+  font-size: 35mpx;
+}
+.as-kid-txt {
+  display: grid;
+  flex: 1;
+  min-width: 0;
+}
+.as-kid-txt b {
+  font-size: 18mpx;
+  line-height: 1.3;
+}
+.as-kid-txt span {
+  font-size: 12mpx;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.as-count {
+  padding: 4mpx 10mpx;
+  border-radius: 999mpx;
+  background: var(--cream-deep);
+  color: var(--muted);
+  font-size: 12mpx;
+  font-weight: 500;
+}
+.as-chev {
+  display: inline-flex;
+  margin-left: -4mpx;
+  color: var(--muted);
+  font-size: 18mpx;
+}
+.as-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40mpx;
+  height: 40mpx;
+  border-radius: 50%;
+  background: var(--sage-soft);
+  color: var(--sage);
+  font-size: 18mpx;
+}
+.as-plus--lg { font-size: 20mpx; }
+.as-short {
+  display: flex;
+  align-items: center;
+  gap: 10mpx;
+  margin: 0 20mpx;
+  padding: 12mpx;
+}
+.as-short > span:last-child {
+  display: grid;
+}
+.as-short b {
+  font-size: 14mpx;
+  font-weight: 500;
+}
+.as-short span span {
+  font-size: 11mpx;
+  color: var(--muted);
+}
+
+.as-nav {
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 5;
+  display: flex;
+  padding-bottom: 18mpx;
+  border-top: 1mpx solid var(--border);
+  background: rgb(255 255 255 / 0.95);
+}
+.as-nav span {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 4mpx;
+  padding-top: 12mpx;
+  font-size: 11mpx;
+  font-weight: 500;
+  color: var(--muted);
+}
+.as-nav .as-i { font-size: 22mpx; }
+.as-nav .on { color: var(--sage); }
+.as-nav--parent span {
+  gap: 2mpx;
+  padding-top: 10mpx;
+  font-size: 10mpx;
+}
+.as-nav--parent .as-i { font-size: 20mpx; }
+
+/* parent */
+.as-child {
+  display: flex;
+  align-items: center;
+  gap: 16mpx;
+  padding: 18mpx 20mpx 0;
+}
+.as-child .as-xs { margin-top: 4mpx !important; }
+.as-att,
+.as-chips,
+.as-detail {
+  margin: 0 20mpx 8mpx;
+}
+.as-att { padding: 16mpx; }
+.as-att-title {
+  display: flex;
+  align-items: center;
+  gap: 8mpx;
+  margin-bottom: 12mpx !important;
+  font-size: 14mpx;
+  font-weight: 500;
+}
+.as-att-title .as-i { font-size: 16mpx; }
+.as-att-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8mpx;
+}
+.as-tb {
+  display: grid;
+  gap: 6mpx;
+  padding: 12mpx;
+  border-radius: 12mpx;
+  background: var(--cream-deep);
+}
+.as-tb-l {
+  display: flex;
+  align-items: center;
+  gap: 4mpx;
+  font-size: 11mpx;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.as-tb-l .as-i { font-size: 14mpx; }
+.as-tb-ok { margin-left: auto; }
+.as-tb-ok .as-i { font-size: 12mpx; }
+.as-tb-v {
+  padding: 8mpx;
+  border-radius: 8mpx;
+  background: #fff;
+  font-size: 16mpx;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.as-tb-v--empty { color: var(--muted); }
+.as-att-foot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12mpx !important;
+  font-size: 12mpx;
+  color: var(--muted);
+}
+.as-att-foot b {
+  font-weight: 500;
+  color: var(--fg);
+}
+.as-chips { padding: 12mpx; }
+.as-over {
+  margin: 0 4mpx 8mpx !important;
+  font-size: 11mpx;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.as-chips ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8mpx;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.as-chips li {
+  display: flex;
+  align-items: center;
+  gap: 8mpx;
+  padding: 8mpx;
+  border-radius: 12mpx;
+  font-size: 16mpx;
+}
+.as-chips li > span { display: grid; min-width: 0; }
+.as-chips small {
+  font-size: 10mpx;
+  line-height: 1;
+  opacity: 0.8;
+}
+.as-chips b {
+  font-size: 14mpx;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.as-chips .as-t-sage { color: var(--sage); }
+.as-chips .as-t-mustard { color: var(--mustard); }
+.as-chips .as-t-blush { color: var(--rose-deep); }
+.as-chips .as-t-sky { color: var(--plum); }
+.as-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15mpx 16mpx;
+  font-size: 16mpx;
+  font-weight: 500;
+}

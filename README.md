@@ -42,22 +42,9 @@ Les informations inconnues ne sont **pas inventées** : elles apparaissent comme
 - les réponses de la FAQ (`src/content/home.ts`) sont rédigées sans prix ni délai : relisez-les pour qu’elles collent exactement à votre offre ;
 - la durée de conservation des données (3 ans) dans la politique de confidentialité (`src/pages/Legal.tsx`).
 
-### Ajouter les captures d’écran d’Assmati
+### Aperçu d’Assmati
 
-La section « Notre travail » présente Assmati avec ses informations réelles (nom, accroche, fonctionnalités, lien vers assmati.com).
-Pour afficher de vraies captures :
-
-1. exportez une capture ordinateur (1600 × 1000 px environ) et une capture mobile (780 × 1688 px environ) en WebP ;
-2. déposez-les dans `src/assets/realisations/` (ex. `assmati-desktop.webp`, `assmati-mobile.webp`) ;
-3. dans `src/components/sections/Work.tsx`, remplacez la ligne `const shots = {}` :
-
-```ts
-import assmatiDesktop from '../../assets/realisations/assmati-desktop.webp';
-import assmatiMobile from '../../assets/realisations/assmati-mobile.webp';
-const shots = { desktop: assmatiDesktop, mobile: assmatiMobile };
-```
-
-Les captures s’affichent alors dans un navigateur et un téléphone, à la place du tableau des fonctionnalités.
+La section « Notre travail » montre l’interface réelle d’Assmati (accueil de l’assistante maternelle et accueil du parent), reconstruite à partir du code source du projet Lovable : mêmes couleurs, typographies (Fraunces, Inter), composants et libellés. Les prénoms, la MAM et les chiffres sont des données de démonstration. Code : `src/mockups/Assmati.tsx` et `Assmati.css`.
 
 ---
 
@@ -138,4 +125,4 @@ Les images des maquettes (plats, intérieurs, maisons, céramiques) sont dessin�
 
 ## Licences
 
-Polices Mona Sans, Young Serif, IBM Plex Sans et Cormorant Garamond : SIL Open Font License 1.1.
+Polices Mona Sans, Young Serif, IBM Plex Sans, Cormorant Garamond, Fraunces et Inter : SIL Open Font License 1.1.

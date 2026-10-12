@@ -1,28 +1,17 @@
 import type { CSSProperties } from 'react';
+import { AssmatiAssistante, AssmatiParent } from '../../mockups/Assmati';
 import { work } from '../../content/home';
 import { ContactButton } from '../contact/ContactContext';
-import { BrowserFrame, PhoneFrame } from '../ui/Devices';
+import { PhoneFrame } from '../ui/Devices';
 import { Icon } from '../ui/Icon';
-
-/**
- * Captures d'écran réelles d'Assmati (facultatif).
- * Déposez les images dans src/assets/realisations/ puis remplacez les valeurs ci-dessous, par exemple :
- *   import assmatiDesktop from '../../assets/realisations/assmati-desktop.webp';
- *   const shots = { desktop: assmatiDesktop, mobile: assmatiMobile };
- * Tant qu'aucune capture n'est fournie, la section présente les fonctionnalités réelles de l'application.
- */
-const shots: { desktop?: string; mobile?: string } = {};
 
 function Modules() {
   return (
-    <ul className="wk-modules">
-      {work.modules.map((m, i) => (
-        <li key={m.title} className="wk-module" style={{ '--i': i } as CSSProperties}>
-          <span className="wk-module-icon">
-            <Icon name={m.icon} />
-          </span>
-          <span className="wk-module-title">{m.title}</span>
-          <span className="wk-module-text">{m.text}</span>
+    <ul className="wk-features" aria-label="Fonctionnalités développées">
+      {work.modules.map((m) => (
+        <li key={m.title}>
+          <Icon name={m.icon} />
+          {m.title}
         </li>
       ))}
     </ul>
@@ -30,7 +19,6 @@ function Modules() {
 }
 
 export function Work() {
-  const hasShots = Boolean(shots.desktop);
   return (
     <section id="travail" className="section work" aria-labelledby="travail-title">
       <div className="container-site">
@@ -87,23 +75,22 @@ export function Work() {
                 En ligne
               </span>
             </div>
-            {hasShots ? (
-              <div className="wk-shots">
-                <BrowserFrame url={work.domain} className="wk-shot-browser">
-                  <img src={shots.desktop} alt={`Interface de l’application ${work.name}`} loading="lazy" />
-                </BrowserFrame>
-                {shots.mobile && (
-                  <PhoneFrame className="wk-shot-phone">
-                    <img src={shots.mobile} alt={`${work.name} sur mobile`} loading="lazy" />
-                  </PhoneFrame>
-                )}
-              </div>
-            ) : (
-              <div className="wk-board">
-                <p className="wk-board-title">Fonctionnalités développées</p>
-                <Modules />
-              </div>
-            )}
+            <div className="wk-phones">
+              <figure className="wk-phone wk-phone--a">
+                <PhoneFrame>
+                  <AssmatiAssistante />
+                </PhoneFrame>
+                <figcaption>Côté assistante maternelle</figcaption>
+              </figure>
+              <figure className="wk-phone wk-phone--b">
+                <PhoneFrame>
+                  <AssmatiParent />
+                </PhoneFrame>
+                <figcaption>Côté parents</figcaption>
+              </figure>
+            </div>
+            <Modules />
+            <p className="wk-demo">Interface de l’application, présentée avec des données de démonstration.</p>
           </div>
         </article>
       </div>
